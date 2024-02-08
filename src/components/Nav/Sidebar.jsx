@@ -12,7 +12,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
         <div className="flexNullCenter">
           <LogoIcon />
           <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
+            TuBarbería
           </h1>
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
@@ -46,7 +46,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Services
+            Sobre Nosotros
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -60,7 +60,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Projects
+            Servicios
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -88,7 +88,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Pricing
+            Precios
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -102,11 +102,11 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             smooth={true}
             offset={-60}
           >
-            Contact
+            Contacto
           </Link>
         </li>
       </UlStyle>
-      <UlStyle className="flexSpaceCenter">
+      {/* <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
           <a href="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
             Log in
@@ -117,7 +117,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             Get Started
           </a>
         </li>
-      </UlStyle>
+      </UlStyle> */}
     </Wrapper>
   );
 }
@@ -131,7 +131,7 @@ const Wrapper = styled.nav`
   right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
   z-index: 9999;
   @media (max-width: 400px) {
-    width: 100%;
+    width: ${(props) => (props.sidebarOpen ? "100%" : "0px")};;
   }
 `;
 const SidebarHeader = styled.div`
