@@ -16,9 +16,9 @@ export default function Header() {
           <HeaderP className="font13 semiBold">
             Experimenta el arte de la barbería tradicional en un ambiente moderno y acogedor.
           </HeaderP>
-          <BtnWrapper>
+          {/* <BtnWrapper>
             <FullButton title="Get Started" />
-          </BtnWrapper>
+          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
@@ -30,9 +30,9 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>Descubre el arte de la barbería donde la tradición se fusiona con la modernidad. ¡Bienvenido a una experiencia de estilo impecable!</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              {/* <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p> */}
             </div>
           </QuoteWrapper>
           <DotsWrapper>

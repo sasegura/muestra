@@ -9,6 +9,7 @@ import AddImage1 from "../../assets/img/add/1.jpg";
 import AddImage2 from "../../assets/img/add/2.jpg";
 import AddImage3 from "../../assets/img/add/3.jpg";
 import AddImage4 from "../../assets/img/add/4.jpg";
+import { Link } from "react-scroll";
 
 export default function Services() {
   return (
@@ -71,11 +72,13 @@ Explora nuestra amplia gama de servicios y descubre por qué [Nombre de la Barbe
 ¡Gracias por elegirnos! Esperamos verte pronto.
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
+                  {/* <div style={{ width: "190px" }}>
                     <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
+                  </div> */}
                   <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
+                        <FullButton title="Contact Us" border />
+                    </Link>                    
                   </div>
                 </ButtonsRow>
               </AddLeft>
