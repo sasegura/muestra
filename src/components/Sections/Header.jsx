@@ -7,14 +7,15 @@ import HeaderImage from "../../assets/img/header-img.jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
-export default function Header() {
+export default function Header({data}) {
+  const {title,slogan,paragraph,headerImage}=data
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">Estilo clásico, servicio excepcional.</h1>
+          <h1 className="extraBold font60">{title}</h1>
           <HeaderP className="font13 semiBold">
-            Experimenta el arte de la barbería tradicional en un ambiente moderno y acogedor.
+            {paragraph}
           </HeaderP>
           {/* <BtnWrapper>
             <FullButton title="Get Started" />
@@ -23,14 +24,14 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src={headerImage} alt="office" style={{zIndex: 9}} />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Descubre el arte de la barbería donde la tradición se fusiona con la modernidad. ¡Bienvenido a una experiencia de estilo impecable!</em>
+                <em>{slogan}</em>
               </p>
               {/* <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p> */}
             </div>

@@ -1,111 +1,70 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
-import ServiceBox from "../Elements/ServiceBox";
+import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
-// Assets
-import AddImage1 from "../../assets/img/add/1.jpg";
-import AddImage2 from "../../assets/img/add/2.jpg";
-import AddImage3 from "../../assets/img/add/3.jpg";
-import AddImage4 from "../../assets/img/add/4.jpg";
-import { Link } from "react-scroll";
 
-export default function Services() {
+export default function Services({ data }) {
   return (
-    <Wrapper id="us">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+    <Wrapper id="projects">
+      <div className="whiteBg">
         <div className="container">
-          <ClientSlider />
-        </div>
-      </div>
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
-        {/* <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
+            <h1 className="font40 extraBold">Nuestros Servicios</h1>
+            {/* <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            </p> */}
           </HeaderInfo>
-          <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-            </ServiceBoxWrapper>
-          </ServiceBoxRow>
-        </div> */}
-        <div className="lightBg">
-          <div className="container">
-            <Advertising className="flexSpaceCenter">
-              <AddLeft>
-                {/* <h4 className="font15 semiBold">A few words about company</h4> */}
-                <h2 className="font40 extraBold">Sobre nosotros</h2>
-                <p className="font12">
-                Nos complace darte la bienvenida a nuestro espacio dedicado al cuidado personal masculino. Somos más que una simple barbería; somos un lugar donde la tradición se encuentra con la modernidad, donde cada corte de cabello es una obra de arte y cada afeitado es una experiencia única.
-
-Nuestro equipo de expertos barberos está aquí para ayudarte a lucir y sentirte lo mejor posible. Ya sea que estés buscando un cambio de imagen completo o simplemente necesites un retoque rápido, estamos aquí para satisfacer todas tus necesidades de cuidado personal.
-
-Explora nuestra amplia gama de servicios y descubre por qué [Nombre de la Barbería] es el destino preferido para hombres que valoran la calidad, la atención al detalle y el estilo impecable.
-
-¡Gracias por elegirnos! Esperamos verte pronto.
-                </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  {/* <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div> */}
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                        <FullButton title="Contact Us" border />
-                    </Link>                    
-                  </div>
-                </ButtonsRow>
-              </AddLeft>
-              <AddRight>
-                <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div>
-                </AddRightInner>
-              </AddRight>
-            </Advertising>
+          <div className="row textCenter">
+            {data.map((service) => (
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <ProjectBox
+                  img={service.img}
+                  title={service.name}
+                  text={service.text}
+                  action={() => alert("clicked")}
+                />
+              </div>
+            ))}
           </div>
+          {/* <div className="row flexCenter">
+            <div style={{ margin: "50px 0", width: "200px" }}>
+              <FullButton title="Load More" action={() => alert("clicked")} />
+            </div>
+          </div> */}
         </div>
       </div>
+      {/* <div className="lightBg">
+        <div className="container">
+          <Advertising className="flexSpaceCenter">
+            <AddLeft>
+              <AddLeftInner>
+                <ImgWrapper className="flexCenter">
+                  <img className="radius8" src={AddImage2} alt="add" />
+                </ImgWrapper>
+              </AddLeftInner>
+            </AddLeft>
+            <AddRight>
+              <h4 className="font15 semiBold">A few words about company</h4>
+              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <p className="font12">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
+                <div style={{ width: "190px" }}>
+                  <FullButton title="Get Started" action={() => alert("clicked")} />
+                </div>
+                <div style={{ width: "190px", marginLeft: "15px" }}>
+                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                </div>
+              </ButtonsRow>
+            </AddRight>
+          </Advertising>
+        </div>
+      </div> */}
     </Wrapper>
   );
 }
@@ -113,32 +72,17 @@ Explora nuestra amplia gama de servicios y descubre por qué [Nombre de la Barbe
 const Wrapper = styled.section`
   width: 100%;
 `;
-const ServiceBoxRow = styled.div`
-  @media (max-width: 860px) {
-    flex-direction: column;
-  }
-`;
-const ServiceBoxWrapper = styled.div`
-  width: 20%;
-  margin-right: 5%;
-  padding: 80px 0;
-  @media (max-width: 860px) {
-    width: 100%;
-    text-align: center;
-    padding: 40px 0;
-  }
-`;
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
   }
 `;
 const Advertising = styled.div`
-  margin: 80px 0;
   padding: 100px 0;
+  margin: 100px 0;
   position: relative;
   @media (max-width: 1160px) {
-    padding: 100px 0 40px 0;
+    padding: 60px 0 40px 0;
   }
   @media (max-width: 860px) {
     flex-direction: column;
@@ -152,6 +96,7 @@ const ButtonsRow = styled.div`
   }
 `;
 const AddLeft = styled.div`
+  position: relative;
   width: 50%;
   p {
     max-width: 475px;
@@ -171,64 +116,37 @@ const AddLeft = styled.div`
 `;
 const AddRight = styled.div`
   width: 50%;
-  position: absolute;
-  top: -70px;
-  right: 0;
   @media (max-width: 860px) {
-    width: 100%;
-    position: relative;
-    order: 1;
-    top: -40px;
+    width: 80%;
+    order: 2;
   }
 `;
-const AddRightInner = styled.div`
+const AddLeftInner = styled.div`
   width: 100%;
-`;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
-  margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: -300px;
+  left: 0;
+  @media (max-width: 1190px) {
+    top: -250px;
+  }
+  @media (max-width: 920px) {
+    top: -200px;
+  }
+  @media (max-width: 860px) {
+    order: 1;
+    position: relative;
+    top: -60px;
+    left: 0;
   }
 `;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
+const ImgWrapper = styled.div`
+  width: 100%;
+  padding: 0 15%;
   img {
     width: 100%;
     height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  @media (max-width: 400px) {
+    padding: 0;
   }
 `;

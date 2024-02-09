@@ -1,0 +1,134 @@
+{
+  "header": {
+    "name":"Tu-Bar",
+    "title": "Brindando momentos inolvidables, copa a copa",
+    "paragraph": "Bienvenido a nuestro rincón de buena compañía, excelentes bebidas y momentos inolvidables. ¡Descubre la esencia de la diversión!",
+    "slogan":"Brindamos momentos, servimos experiencias. ¡Descubre el sabor de la vida!",
+    "headerImage":"img/header-bar.jpg"
+  },
+  "about": {
+    "paragraph": "Además de nuestras ofertas gastronómicas, nos esforzamos por crear un ambiente acogedor y amigable donde te sientas como en casa. Ya sea que estés buscando relajarte después de un largo día de trabajo o celebrar una ocasión especial con amigos, estamos aquí para brindarte una experiencia inolvidable.",
+    "image1":"img/add/bar1.jpg",
+    "image2":"img/add/bar2.jpg",
+    "image3":"img/add/bar3.jpg",
+    "image4":"img/add/bar4.jpg"
+  },
+  "services": [
+    {
+      "img": "img/services/bar1.jpg",
+      "name": "Barra de Cócteles",
+      "text": "Nuestra barra de cócteles es el corazón de [Nombre del Bar], donde nuestros talentosos mixólogos preparan una variedad de bebidas creativas y deliciosas. Desde clásicos reinventados hasta creaciones originales, cada cóctel está cuidadosamente elaborado para deleitar tus sentidos."
+    },
+    {
+      "img": "img/services/bar2.jpg",
+      "name": "Amplia Selección de Bebidas",
+      "text": "Creemos en ofrecer una amplia variedad de opciones para nuestros clientes. Disfruta de nuestra selección de cervezas locales e internacionales, vinos de calidad y licores premium, garantizando que siempre encuentres la bebida perfecta para satisfacer tu paladar."
+    },
+    {
+      "img": "img/services/bar3.jpg",
+      "name": "Gastronomía de Calidad",
+      "text": "Complementa tus bebidas con nuestras deliciosas opciones gastronómicas. Desde tapas españolas clásicas hasta platos contemporáneos, cada bocado está preparado con ingredientes frescos y sabores auténticos para una experiencia culinaria inolvidable."
+    },
+    {
+      "img": "img/services/bar4.jpg",
+      "name": "Eventos Especiales",
+      "text": "Ya sea que estés celebrando un cumpleaños, una despedida de soltero o simplemente quieras organizar una noche divertida con amigos, estamos encantados de ayudarte a planificar y organizar tu evento especial. Disfruta de nuestro espacio versátil y de nuestro personal profesional para una experiencia sin igual."
+    },
+    {
+      "img": "img/services/bar5.jpg",
+      "name": "Música en Vivo",
+      "text": "Sumérgete en el ambiente vibrante de [Nombre del Bar] con nuestra programación de música en vivo. Desde actuaciones de bandas locales hasta DJs residentes, te garantizamos una experiencia musical que hará que tus noches sean inolvidables."
+    },
+    {
+      "img": "img/services/bar6.jpg",
+      "name": "Tapas y Bocados",
+      "text": "Disfruta de una deliciosa variedad de tapas y bocados preparados con ingredientes frescos y de calidad. Nuestra carta incluye una selección de opciones para compartir o disfrutar como plato principal, diseñadas para complementar perfectamente tus bebidas."
+    }
+  ],
+  "testimonials": {
+    "intro":"Nos enorgullece compartir las experiencias de nuestros apreciados clientes. Sus opiniones son el reflejo de nuestro compromiso con la excelencia y nos inspiran a seguir mejorando para ofrecer la mejor experiencia posible. Echa un vistazo a lo que dicen algunos de nuestros clientes",
+    "testimonials":[
+      {
+        "img": "img/testimonials/01.jpg",
+        "text": "Excelente ambiente y cócteles deliciosos. El personal es muy amable y atento. Siempre es un placer venir aquí.",
+        "name": "Laura Sánchez"
+      },
+      {
+        "img": "img/testimonials/02.jpg",
+        "text": "¡El lugar perfecto para una noche de diversión! Me encantó la música en vivo y las tapas son deliciosas. Definitivamente volveré pronto.",
+        "name": "Juan Pérez"
+      },
+      {
+        "img": "img/testimonials/03.jpg",
+        "text": "Celebramos mi cumpleaños en [Nombre del Bar] y fue increíble. Organizaron todo para nosotros y nos aseguraron una noche inolvidable. ¡Gracias por todo!",
+        "name": "Carlos Rodríguez"
+      },
+      {
+        "img": "img/testimonials/04.jpg",
+        "text": "He estado en muchos bares, pero ninguno se compara con este. El ambiente es acogedor, las bebidas son excelentes y el personal es muy amigable. ¡Altamente recomendado!",
+        "name": "Marta Gómez"
+      },
+      {
+        "img": "img/testimonials/05.jpg",
+        "text": "¡El ambiente en [Nombre del Bar] es simplemente increíble! Los cócteles son deliciosos y el personal es muy amable. Definitivamente volveré.",
+        "name": "Alejandro González"
+      },
+      {
+        "img": "img/testimonials/06.jpg",
+        "text": "Tuve una noche fantástica en [Nombre del Bar] con amigos. La música estaba genial y las tapas eran deliciosas. ¡Altamente recomendado!",
+        "name": "Sofía Rodríguez"
+      }
+    ]
+  },
+  "prices": {
+    "message":"Te invitamos a disfrutar de una experiencia única y variada cada vez que visites nuestro establecimiento.",
+    "prices":[
+      {
+        "price":"9,99€",
+        "title":"Cócteles Especiales",
+        "text":"Déjate sorprender por nuestra selección de cócteles especiales, cuidadosamente elaborados por nuestros talentosos mixólogos. Desde clásicos reinventados hasta creaciones únicas, cada cóctel está diseñado para ofrecerte una experiencia de sabor única y memorable."
+      },
+      {
+        "price":"15,99€",
+        "title":"Menú Especial de Fin de Semana",
+        "text":"Los fines de semana, ofrecemos un menú especial con platos exclusivos que te sorprenderán. Desde brunchs especiales hasta cenas de tres platos, nuestro menú de fin de semana está diseñado para ofrecerte una experiencia culinaria excepcional que te hará volver por más."
+      },
+      {
+        "price":"7,99€",
+        "title":"Tapas del Día",
+        "text":"Prueba nuestras tapas del día, una deliciosa selección de bocados pequeños perfectos para compartir o disfrutar como plato principal. Nuestro chef crea nuevas y emocionantes tapas todos los días, utilizando ingredientes frescos y de temporada para ofrecerte una experiencia gastronómica única cada vez que nos visites."
+      }
+    ]
+  },
+  "contact":"¿Tienes alguna pregunta, comentario o simplemente quieres decir hola? ¡Nos encantaría saber de ti! No dudes en ponerte en contacto con nosotros a través del formulario de abajo o utilizando la información de contacto proporcionada. Nuestro equipo estará encantado de ayudarte en todo lo que necesites y responder a tus consultas lo antes posible. ¡Esperamos saber de ti pronto!",
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  }
+}

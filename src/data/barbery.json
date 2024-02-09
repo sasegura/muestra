@@ -1,0 +1,156 @@
+{
+  "header": {
+    "name":"Tu-Barbería",
+    "title": "Estilo clásico, servicio excepcional.",
+    "paragraph": "Experimenta el arte de la barbería tradicional en un ambiente moderno y acogedor.",
+    "slogan":"Descubre el arte de la barbería donde la tradición se fusiona con la modernidad. ¡Bienvenido a una experiencia de estilo impecable!",
+    "headerImage":"img/header-img.jpg"
+  },
+  "about": {
+    "paragraph": "Nos complace darte la bienvenida a nuestro espacio dedicado al cuidado personal masculino. Somos más que una simple barbería; somos un lugar donde la tradición se encuentra con la modernidad, donde cada corte de cabello es una obra de arte y cada afeitado es una experiencia única. Nuestro equipo de expertos barberos está aquí para ayudarte a lucir y sentirte lo mejor posible. Ya sea que estés buscando un cambio de imagen completo o simplemente necesites un retoque rápido, estamos aquí para satisfacer todas tus necesidades de cuidado personal. Explora nuestra amplia gama de servicios y descubre por qué [Nombre de la Barbería] es el destino preferido para hombres que valoran la calidad, la atención al detalle y el estilo impecable. ¡Gracias por elegirnos! Esperamos verte pronto.",
+    "image1":"img/add/barbershop1.jpg",
+    "image2":"img/add/barbershop2.jpg",
+    "image3":"img/add/barbershop3.jpg",
+    "image4":"img/add/barbershop4.jpg"
+  },
+  "services": [
+    {
+      "img": "img/services/1.jpg",
+      "name": "Afeitados Tradicionales",
+      "text": "Experimenta la elegancia y el lujo de un afeitado tradicional con nuestra gama de servicios de afeitado. Utilizando técnicas ancestrales y productos de alta calidad, te ofrecemos un afeitado impecable y una experiencia de cuidado facial rejuvenecedora."
+    },
+    {
+      "img": "img/services/2.jpg",
+      "name": "Cortes de Cabello",
+      "text": "Nuestro equipo de barberos expertos está dedicado a proporcionarte el corte de cabello perfecto que se adapte a tu estilo y personalidad. Desde cortes clásicos hasta tendencias modernas, estamos aquí para transformar tu look y realzar tu confianza."
+    },
+    {
+      "img": "img/services/3.jpg",
+      "name": "Cortes de Cabello Personalizados",
+      "text": "Nuestros barberos son maestros en el arte del corte de cabello. Desde estilos clásicos hasta tendencias modernas, trabajaremos contigo para crear el look perfecto que refleje tu estilo y personalidad."
+    },
+    {
+      "img": "img/services/4.jpg",
+      "name": "Productos Premium",
+      "text": "Solo utilizamos productos de la más alta calidad para garantizar resultados excepcionales. Desde champús y acondicionadores hasta pomadas y aceites para barba, nuestros productos premium ayudarán a mantener tu cabello y piel en óptimas condiciones."
+    },
+    {
+      "img": "img/services/5.jpg",
+      "name": "Servicios Especiales para Niños",
+      "text": "Ofrecemos servicios de barbería especialmente diseñados para niños, donde pueden disfrutar de una experiencia divertida y cómoda mientras reciben un corte de cabello de calidad. Nuestros barberos son expertos en tratar con niños y asegurar que se sientan relajados durante su visita."
+    },
+    {
+      "img": "img/services/6.jpg",
+      "name": "Arreglos de Barba",
+      "text": "Mantén tu barba impecable con nuestros servicios de arreglo de barba. Ya sea que desees un perfilado preciso, un suavizado de textura o un diseño único, nuestros barberos te ayudarán a lograr el estilo de barba perfecto que complemente tu apariencia y personalidad."
+    }
+  ],
+  "testimonials": {
+    "intro":"La satisfacción de nuestros clientes es nuestra prioridad número uno. Nos enorgullece compartir las experiencias positivas que nuestros clientes han tenido con nuestros servicios. Estas opiniones reflejan nuestro compromiso con la excelencia y nos motivan a seguir brindando un servicio excepcional en cada visita.",
+    "testimonials":[
+      {
+        "img": "img/testimonials/01.jpg",
+        "text": "He visitado muchas barberías en la ciudad, pero ninguna se compara con [Nombre de la Barbería]. El ambiente es relajado, los barberos son expertos en su oficio y los resultados son siempre excepcionales. ¡Simplemente fenomenal!",
+        "name": "Luis G."
+      },
+      {
+        "img": "img/testimonials/02.jpg",
+        "text": "¡Me encanta este lugar! Siempre salgo sintiéndome como una estrella de cine. El personal es amable, el servicio es de primera clase y el ambiente es acogedor. Definitivamente mi barbería de referencia.",
+        "name": "Ana S."
+      },
+      {
+        "img": "img/testimonials/03.jpg",
+        "text": "No suelo dejar reseñas, pero realmente se lo merece. Han convertido el acto de cortarse el pelo en una experiencia extraordinaria. No puedo imaginar ir a ningún otro lugar.",
+        "name": "Sofía D."
+      },
+      {
+        "img": "img/testimonials/04.jpg",
+        "text": "Siempre he sido muy exigente con mi cabello, pero desde que la descubrí, nunca he mirado atrás. La atención al detalle y la pasión por su trabajo se reflejan en cada corte. ¡Simplemente magnífico!",
+        "name": "Andrea M."
+      },
+      {
+        "img": "img/testimonials/05.jpg",
+        "text": "¡Recomiendo completamente [Nombre de la Barbería]! No solo me dejaron con un corte de cabello impecable, sino que también disfruté de un afeitado relajante y un servicio excepcional. ¡Ya he reservado mi próxima cita!",
+        "name": "Juan Pérez"
+      },
+      {
+        "img": "img/testimonials/06.jpg",
+        "text": "Increíble experiencia. Me encantó el ambiente acogedor y el trato amable del personal. Mi barbero fue muy atento y profesional, y me dio el mejor corte de cabello que he tenido en años. Definitivamente volveré.",
+        "name": "María Rodríguez"
+      }
+    ]
+  },
+  "prices": {
+    "message":"Los precios pueden variar según la longitud y el tipo de cabello. Para obtener un presupuesto más preciso, no dudes en comunicarte con nosotros o reservar una cita.",
+    "prices":[
+      {
+        "price":"29,99€",
+        "title":"Cortes de Cabello",
+        "text":"Experimenta la maestría de nuestros barberos con una variedad de cortes de cabello diseñados para realzar tu estilo y personalidad. Desde cortes clásicos hasta tendencias modernas, te garantizamos un resultado impecable que te hará lucir y sentirte seguro."
+      },
+      {
+        "price":"49,99€",
+        "title":"Afeitados",
+        "text":"Sumérgete en la experiencia tradicional de un afeitado en barbería, donde la precisión y el cuidado se combinan para ofrecerte un afeitado suave y revitalizante. Nuestros barberos expertos están aquí para brindarte un servicio excepcional y un acabado impecable."
+      },
+      {
+        "price":"59,99€",
+        "title":"Recorte y Mantenimiento de Barba",
+        "text":"Define tu estilo con nuestros servicios de recorte y mantenimiento de barba. Ya sea que prefieras un aspecto pulido o algo más natural, nuestros barberos expertos te ayudarán a mantener tu barba con un aspecto impecable y bien cuidado."
+      }
+    ]
+  },
+  "contact":"Gracias por considerarnos para tus necesidades de cuidado personal. Estamos emocionados de escucharte y ayudarte en todo lo que necesites. Por favor, completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.",
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 
-export default function Blog() {
+export default function Blog({ data }) {
   return (
     <Wrapper id="blog">
       {/* <div className="whiteBg">
@@ -79,15 +79,13 @@ export default function Blog() {
           </div>
         </div>
       </div> */}
-      <div className="lightBg" style={{padding: '50px 0'}}>
+      <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">¿Que piensan de nosotros?</h1>
-            <p className="font13">
-            La satisfacción de nuestros clientes es nuestra prioridad número uno. Nos enorgullece compartir las experiencias positivas que nuestros clientes han tenido con nuestros servicios. Estas opiniones reflejan nuestro compromiso con la excelencia y nos motivan a seguir brindando un servicio excepcional en cada visita.
-            </p>
+            <p className="font13">{data.intro}</p>
           </HeaderInfo>
-          <TestimonialSlider />
+          <TestimonialSlider testimonials={data.testimonials} />
         </div>
       </div>
     </Wrapper>

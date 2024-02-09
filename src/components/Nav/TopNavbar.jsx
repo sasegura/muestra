@@ -7,8 +7,9 @@ import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
+import FullButton from "../Buttons/FullButton";
 
-export default function TopNavbar() {
+export default function TopNavbar({swicthBusines, name}) {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -22,14 +23,14 @@ export default function TopNavbar() {
 
   return (
     <>
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} name={name} swicthBusines={swicthBusines} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
             <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              TuBarbería
+              {name}
             </h1>
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
@@ -67,18 +68,21 @@ export default function TopNavbar() {
               </Link>
             </li>
           </UlWrapper>
-          {/* <UlWrapperRight className="flexNullCenter">
-            <li className="semiBold font15 pointer">
+          <UlWrapperRight className="flexNullCenter">
+            {/* <li className="semiBold font15 pointer">
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
                 Log in
               </a>
-            </li>
+            </li> */}
             <li className="semiBold font15 pointer flexCenter">
-              <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+              <FullButton  title="Swicth Busisnes" action={swicthBusines} >
+                
+              </FullButton>
+              {/* <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
                 Get Started
-              </a>
+              </a> */}
             </li>
-          </UlWrapperRight> */}
+          </UlWrapperRight>
         </NavInner>
       </Wrapper>
     </>
