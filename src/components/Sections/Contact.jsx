@@ -1,7 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Cita from "../Elements/Citas";
+var uuid = require("uuid-v4");
 
 export default function Contact({ data }) {
+  const [name, setName] = useState("");
+  const [messaje, setMessaje] = useState("");
+  const [mail, setMail] = useState("");
+
+  //Citas en localstorage
+  let citasIniciales = JSON.parse(localStorage.getItem("citas"));
+  if (!citasIniciales) citasIniciales = [];
+
+  //Arreglo de citas
+  const [citas, guardarCitas] = useState(citasIniciales);
+
+  //Use Effect para realizar ciertas operaciones cuando el state cambia.
+  useEffect(() => {
+    let citasIniciales = JSON.parse(localStorage.getItem("citas"));
+    if (citasIniciales) {
+      localStorage.setItem("citas", JSON.stringify(citas));
+    } else {
+      localStorage.setItem("citas", JSON.stringify([]));
+    }
+  }, [citas]); // EL [] => es un Array de Dependencias.
+
+  //Funcion que tome las citas actuales y agrege la nueva
+  const crearCita = () => {
+    guardarCitas([...citas, { id: uuid(), name, mail, messaje }]);
+  };
+
+  // Funcion que elimina una cia por su id
+  const eliminarCita = (id) => {
+    const nuevasCitas = citas.filter((cita) => cita.id !== id);
+    guardarCitas(nuevasCitas);
+  };
+
   return (
     <Wrapper id="contact">
       <div className="lightBg">
@@ -19,6 +53,7 @@ export default function Contact({ data }) {
                   type="text"
                   id="fname"
                   name="fname"
+                  onChange={(e) => setName(e.target.value)}
                   className="font20 extraBold"
                 />
                 <label className="font13">Email:</label>
@@ -26,6 +61,7 @@ export default function Contact({ data }) {
                   type="text"
                   id="email"
                   name="email"
+                  onChange={(e) => setMail(e.target.value)}
                   className="font20 extraBold"
                 />
                 <label className="font13">Mensaje:</label>
@@ -33,6 +69,7 @@ export default function Contact({ data }) {
                   type="text"
                   id="subject"
                   name="subject"
+                  onChange={(e) => setMessaje(e.target.value)}
                   className="font20 extraBold"
                 />
                 <textarea
@@ -47,13 +84,18 @@ export default function Contact({ data }) {
               <SumbitWrapper className="flex">
                 <ButtonInput
                   type="submit"
-                  onClick={() => alert("Mensaje enviado")}
+                  onClick={crearCita}
                   value="Enviar Mensaje"
                   className="pointer animate radius8"
                   style={{ maxWidth: "220px" }}
                 />
               </SumbitWrapper>
             </div>
+          </div>
+          <div className="row" style={{ paddingBottom: "30px" }}>
+            {citas.map((cita, index) => (
+              <Cita key={index} cita={cita} eliminarCita={eliminarCita} />
+            ))}
           </div>
         </div>
       </div>
