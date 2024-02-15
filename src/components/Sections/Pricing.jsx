@@ -13,8 +13,8 @@ export default function Pricing({ data }) {
             <p className="font13">{data.message}</p>
           </HeaderInfo>
           <TablesWrapper className="flexSpaceNull">
-            {data.prices.map(({ title, text, price }) => (
-              <TableBox>
+            {data.prices.map(({ title, text, price }, index) => (
+              <TableBox key={index}>
                 <PricingTable
                   icon="roller"
                   price={price}

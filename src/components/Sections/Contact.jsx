@@ -1,41 +1,72 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Cita from "../Elements/Citas";
-var uuid = require("uuid-v4");
+import db from "../Elements/FirebaseConfig";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  updateDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
+
+// var uuid = require("uuid-v4");
 
 export default function Contact({ data }) {
   const [name, setName] = useState("");
   const [messaje, setMessaje] = useState("");
-  const [mail, setMail] = useState("");
+  const [email, setMail] = useState("");
 
-  //Citas en localstorage
-  let citasIniciales = JSON.parse(localStorage.getItem("citas"));
-  if (!citasIniciales) citasIniciales = [];
+  const [lista, setLista] = useState([]);
 
-  //Arreglo de citas
-  const [citas, guardarCitas] = useState(citasIniciales);
-
-  //Use Effect para realizar ciertas operaciones cuando el state cambia.
   useEffect(() => {
-    let citasIniciales = JSON.parse(localStorage.getItem("citas"));
-    if (citasIniciales) {
-      localStorage.setItem("citas", JSON.stringify(citas));
-    } else {
-      localStorage.setItem("citas", JSON.stringify([]));
+    onSnapshot(
+      collection(db, "mensajes"),
+      (snapshot) => {
+        setLista(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }, []);
+
+  const crearCita = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "mensajes"), {
+        name: name,
+        email: email,
+        messaje: messaje,
+      });
+    } catch (error) {
+      console.log(error);
     }
-  }, [citas]); // EL [] => es un Array de Dependencias.
-
-  //Funcion que tome las citas actuales y agrege la nueva
-  const crearCita = () => {
-    guardarCitas([...citas, { id: uuid(), name, mail, messaje }]);
+    clearForm();
   };
 
-  // Funcion que elimina una cia por su id
-  const eliminarCita = (id) => {
-    const nuevasCitas = citas.filter((cita) => cita.id !== id);
-    guardarCitas(nuevasCitas);
+  const clearForm = () => {
+    setMail("");
+    setName("");
+    setMessaje("");
   };
 
+  const deleteMessage = async (id) => {
+    try {
+      deleteDoc(doc(db, "mensajes", id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const updateMessage = (id) => {
+    // e.preventDefault();
+    updateDoc(doc(db, "mensajes", id), {
+      name: name,
+      email: email,
+      messaje: messaje,
+    });
+  };
   return (
     <Wrapper id="contact">
       <div className="lightBg">
@@ -53,6 +84,7 @@ export default function Contact({ data }) {
                   type="text"
                   id="fname"
                   name="fname"
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="font20 extraBold"
                 />
@@ -61,23 +93,20 @@ export default function Contact({ data }) {
                   type="text"
                   id="email"
                   name="email"
+                  value={email}
                   onChange={(e) => setMail(e.target.value)}
                   className="font20 extraBold"
                 />
                 <label className="font13">Mensaje:</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  onChange={(e) => setMessaje(e.target.value)}
-                  className="font20 extraBold"
-                />
+
                 <textarea
                   rows="4"
                   cols="50"
                   type="text"
                   id="message"
                   name="message"
+                  value={messaje}
+                  onChange={(e) => setMessaje(e.target.value)}
                   className="font20 extraBold"
                 />
               </Form>
@@ -93,10 +122,13 @@ export default function Contact({ data }) {
             </div>
           </div>
           <div className="row" style={{ paddingBottom: "30px" }}>
-            {citas.map((cita, index) => (
-              <Cita key={index} cita={cita} eliminarCita={eliminarCita} />
+            {lista.map((cita) => (
+              <Cita key={cita.id} cita={cita} eliminarCita={deleteMessage} />
             ))}
           </div>
+          {/* <div className="row" style={{ paddingBottom: "30px" }}>
+            <Firebase />
+          </div> */}
         </div>
       </div>
     </Wrapper>
@@ -148,11 +180,11 @@ const ButtonInput = styled.input`
     margin: 0 auto;
   }
 `;
-const ContactImgBox = styled.div`
-  max-width: 180px;
-  align-self: flex-end;
-  margin: 10px 30px 10px 0;
-`;
+// const ContactImgBox = styled.div`
+//   max-width: 180px;
+//   align-self: flex-end;
+//   margin: 10px 30px 10px 0;
+// `;
 const SumbitWrapper = styled.div`
   @media (max-width: 991px) {
     width: 100%;

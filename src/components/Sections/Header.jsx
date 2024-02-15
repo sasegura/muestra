@@ -7,16 +7,14 @@ import HeaderImage from "../../assets/img/header-img.jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
-export default function Header({data}) {
-  const {title,slogan,paragraph,headerImage}=data
+export default function Header({ data }) {
+  const { title, slogan, paragraph, headerImage } = data;
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
           <h1 className="extraBold font60">{title}</h1>
-          <HeaderP className="font13 semiBold">
-            {paragraph}
-          </HeaderP>
+          <HeaderP className="font13 semiBold">{paragraph}</HeaderP>
           {/* <BtnWrapper>
             <FullButton title="Get Started" />
           </BtnWrapper> */}
@@ -24,7 +22,12 @@ export default function Header({data}) {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={headerImage} alt="office" style={{zIndex: 9}} />
+          <Img
+            className="radius8"
+            src={headerImage}
+            alt="office"
+            style={{ zIndex: 9 }}
+          />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
@@ -45,7 +48,6 @@ export default function Header({data}) {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -87,12 +89,12 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
+// const BtnWrapper = styled.div`
+//   max-width: 190px;
+//   @media (max-width: 960px) {
+//     margin: 0 auto;
+//   }
+// `;
 const GreyDiv = styled.div`
   width: 30%;
   height: 700px;
@@ -151,5 +153,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-
