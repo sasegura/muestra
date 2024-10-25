@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// Components
-import FullButton from "../Buttons/FullButton";
-// Assets
-import HeaderImage from "../../assets/img/header-img.jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -15,9 +11,6 @@ export default function Header({ data }) {
         <div>
           <h1 className="extraBold font60">{title}</h1>
           <HeaderP className="font13 semiBold">{paragraph}</HeaderP>
-          {/* <BtnWrapper>
-            <FullButton title="Get Started" />
-          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
@@ -36,7 +29,6 @@ export default function Header({ data }) {
               <p className="font15 whiteColor">
                 <em>{slogan}</em>
               </p>
-              {/* <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p> */}
             </div>
           </QuoteWrapper>
           <DotsWrapper>
