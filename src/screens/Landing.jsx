@@ -32,6 +32,7 @@ export default function Landing() {
     <>
       <Helmet>
         <meta charset="UTF-8"/>
+        <meta name="google-site-verification" content="UlIego5vQwbkQ6C0WqtRYLjQL8yv8Hl4btn5K_Uszeg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="Barbería de alta calidad en [Ubicación], especializada en cortes de cabello modernos, afeitados y cuidado de la barba."/>
         <meta name="keywords" content="barbería, corte de cabello, afeitado, cuidado de la barba, barbería en [Ubicación]"/>
